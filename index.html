@@ -9,29 +9,29 @@
     <p id="demo"></p>
     <script>
         
-//Configure
+
 
 let count = 10;
-showMessage();
-function showMessage() {
+show();
+function show() {
      setTimeout(() =>{
       document.getElementById("demo").innerHTML=count;
       count--;
       if(count !== 0){
-        timer(showMessage); // callback function called, which is passed as argument
+        timercount(show); 
       }else {
-        document.getElementById('demo').innerHTML ='';
+       
         document.getElementById('demo').innerHTML = 'Happy independence day';
       }
     }
-    , 1000); // Callback function passed as argument to the setTimeout function
+    , 1000);
 }
 
-function timer(callback){
-  console.log(callback);
+function timercount(cb){
+  console.log(cb);
   setTimeout(()=> {
-      callback();
-  },0, callback);
+      cb();
+  },0);
 }
 
     </script>
