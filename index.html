@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <p id="demo"></p>
+<script>
+ 
+
+  
+ function show(a){
+   
+    document.getElementById("demo").innerHTML = a;
+     if(a>1){
+        
+        setTimeout(function(){
+            a=a-1;
+            //console.log(a);
+            document.getElementById("demo").innerHTML = a;
+       
+            show(a)
+             }, 1000);
+  
+     
+     }
+     if(a==1){
+        document.getElementById("demo").innerHTML = "fa";
+        
+
+}
+     
+    
+ }
+ function geeky (callback){
+     var x=10;
+     callback(10)
+ }
+ geeky(show)
+    
+
+
+ 
+
+
+
+    //console.log("hi")
+</script>
+</body>
+</html>
